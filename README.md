@@ -60,6 +60,10 @@ Este é um projeto backend para gerenciamento de aeroportos e voos, desenvolvido
     npm start
     ```
 
+6. Configurando cors
+
+Certifique-se de colocar a porta certa ao tentar fazer as requisições pelo frontend. O cors está sendo configurado no main.ts 
+
 ## Endpoints
 
 ### Aeroportos
