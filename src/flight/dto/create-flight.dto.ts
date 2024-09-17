@@ -7,9 +7,9 @@ export class CreateFlightDto {
 
     @IsNotEmpty()
     @IsUUID('4')
-    source_id: string;
+    sourceId: string;
 
     @IsNotEmpty()
     @IsUUID('4')
-    destiny_id: string;
+    destinyId: string;
 }
