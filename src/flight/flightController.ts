@@ -23,8 +23,8 @@ export class FlightController {
 
     @Post()
     async create(@Body() flightInput: CreateFlightDto) {
-        const source = await this.locationService.findOne(flightInput.source_id);
-        const destiny = await this.locationService.findOne(flightInput.destiny_id);
+        const source = await this.locationService.findOne(flightInput.sourceId);
+        const destiny = await this.locationService.findOne(flightInput.destinyId);
 
         const flight = new Flight(source, destiny, flightInput.date);
 
@@ -33,8 +33,8 @@ export class FlightController {
 
     @Put(':id')
     async update(@Param('id') id: string, @Body() flightInput: CreateFlightDto) {
-        const source = await this.locationService.findOne(flightInput.source_id);
-        const destiny = await this.locationService.findOne(flightInput.destiny_id);
+        const source = await this.locationService.findOne(flightInput.sourceId);
+        const destiny = await this.locationService.findOne(flightInput.destinyId);
 
         const updatedFlight = new Flight(source, destiny, flightInput.date);
 
